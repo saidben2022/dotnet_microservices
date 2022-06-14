@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dotnet Repos\\AspdotnetMicroservice\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj": {}
+    "D:\\dot net repos\\AspdotnetMicroservice\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj": {}
   },
   "projects": {
-    "D:\\dotnet Repos\\AspdotnetMicroservice\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj": {
+    "D:\\dot net repos\\AspdotnetMicroservice\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnet Repos\\AspdotnetMicroservice\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj",
+        "projectUniqueName": "D:\\dot net repos\\AspdotnetMicroservice\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj",
         "projectName": "Catalog.Api",
-        "projectPath": "D:\\dotnet Repos\\AspdotnetMicroservice\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj",
-        "packagesPath": "C:\\Users\\Said Ben\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnet Repos\\AspdotnetMicroservice\\Services\\Catalog\\Catalog.Api\\obj\\",
+        "projectPath": "D:\\dot net repos\\AspdotnetMicroservice\\Services\\Catalog\\Catalog.Api\\Catalog.Api.csproj",
+        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
+        "outputPath": "D:\\dot net repos\\AspdotnetMicroservice\\Services\\Catalog\\Catalog.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Said Ben\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.15.1, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.16.0, )"

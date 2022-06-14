@@ -1,0 +1,27 @@
+services:
+  catalog.api:
+    build:
+      context: D:\dot net repos\AspdotnetMicroservice
+      dockerfile: Services/Catalog/Catalog.Api/Dockerfile
+    container_name: catalogapi
+    depends_on:
+      catalogdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: catalogapi
+    ports:
+    - published: 8000
+      target: 80
+  catalogdb:
+    container_name: catalogdb
+    image: mongo
+    ports:
+    - published: 27017
+      target: 27017
+    restart: always
+    volumes:
+    - mongo_data:/data/db:rw
+version: '3.4'
+volumes:
+  mongo_data: {}
