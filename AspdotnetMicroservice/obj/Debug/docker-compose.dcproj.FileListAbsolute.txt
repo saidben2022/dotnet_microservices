@@ -18,3 +18,13 @@ D:\dot net repos\AspdotnetMicroservice\bin\Debug\Catalog.Api.runtimeconfig.json
 D:\dot net repos\AspdotnetMicroservice\bin\Debug\appsettings.Development.json
 D:\dot net repos\AspdotnetMicroservice\bin\Debug\appsettings.json
 D:\dot net repos\AspdotnetMicroservice\bin\Debug\Catalog.Api.exe
+D:\dot net repos\AspdotnetMicroservice\bin\Debug\Basket.Api.deps.json
+D:\dot net repos\AspdotnetMicroservice\bin\Debug\Basket.Api.runtimeconfig.json
+D:\dot net repos\AspdotnetMicroservice\bin\Debug\Basket.Api.exe
+D:\dot net repos\AspdotnetMicroservice\bin\Debug\Basket.Api.dll
+D:\dot net repos\AspdotnetMicroservice\bin\Debug\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\dot net repos\AspdotnetMicroservice\bin\Debug\Newtonsoft.Json.dll
+D:\dot net repos\AspdotnetMicroservice\bin\Debug\StackExchange.Redis.dll
+D:\dot net repos\AspdotnetMicroservice\bin\Debug\Pipelines.Sockets.Unofficial.dll
+D:\dot net repos\AspdotnetMicroservice\bin\Debug\System.Diagnostics.PerformanceCounter.dll
+D:\dot net repos\AspdotnetMicroservice\bin\Debug\Basket.Api.pdb

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uRm1J88DDT4KK5Xn1/uHEx5yDu50O0W0mkDiankBRZzVTY90qemxTQIkcN0nnCpzPtDmy8+u/Dur0hDi02aeig==",
+  "dgSpecHash": "h5RHA8wrYSTDcT1cBqrub6oWvQQE206I6fM+ZSWyUlv5bT7uF8m2yC2cBD+jr73MJa0gLk5sOZAuByYTKfaYMA==",
   "success": true,
   "projectFilePath": "D:\\dot net repos\\AspdotnetMicroservice\\Services\\Basket\\Basket.Api\\Basket.Api\\Basket.Api.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\MSI\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",

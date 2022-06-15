@@ -1,0 +1,74 @@
+services:
+  basket.api:
+    build:
+      context: D:\dot net repos\AspdotnetMicroservice
+      dockerfile: Services/Basket/Basket.Api/Basket.Api/Dockerfile
+    container_name: besketapi
+    depends_on:
+      basketdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DatabaseSettings:ConnectionString: basketdb:6379
+    image: basketapi
+    ports:
+    - published: 8001
+      target: 80
+  basketdb:
+    container_name: basketdb
+    image: redis:alpine
+    ports:
+    - published: 6379
+      target: 6379
+    restart: always
+  catalog.api:
+    build:
+      context: D:\dot net repos\AspdotnetMicroservice
+      dockerfile: Services/Catalog/Catalog.Api/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Catalog.Api
+      target: base
+    container_name: catalogapi
+    depends_on:
+      catalogdb:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      DatabaseSettings:ConnectionString: mongodb://catalogdb:27017
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: catalogapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net6.0/Catalog.Api.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 8000
+      target: 80
+    tty: true
+    volumes:
+    - D:\dot net repos\AspdotnetMicroservice\Services\Catalog\Catalog.Api:/app:rw
+    - C:\Users\MSI\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\MSI\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\MSI\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Users\MSI\.nuget\packages:/root/.nuget/packages:ro
+    - D:\dot net repos\AspdotnetMicroservice:/src:rw
+  catalogdb:
+    container_name: catalogdb
+    image: mongo
+    ports:
+    - published: 27017
+      target: 27017
+    restart: always
+    volumes:
+    - mongo_data:/data/db:rw
+version: '3.4'
+volumes:
+  mongo_data: {}
