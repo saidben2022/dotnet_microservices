@@ -5,6 +5,10 @@ services:
     image: mongo
   basketdb:
     image: redis:alpine
+  discountdb:
+    image: postgres
+  pgadmin:
+    image: dpage/pgadmin4
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
     build:
@@ -19,5 +23,7 @@ services:
 
 volumes:
   mongo_data:
+  postgres_data:
+  pgadmin_data:
   
 

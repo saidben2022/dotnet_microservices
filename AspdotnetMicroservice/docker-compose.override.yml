@@ -14,7 +14,31 @@ services:
     restart: always
     ports:
       - "6379:6379"
+  discountdb:
+    container_name: discountdb
+    environment:
+      - POSTGRES_USER=postgres #Be carful to do not add any whitespace after =
+      - POSTGRES_PASSWORD=postgres1993
+      - POSTGRES_DB=DiscountDb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+    restart: always
+    ports:
+      - "5432:5432"
    
+  pgadmin:
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@gmail.com #Be carful to do not add any whitespace after =
+      - PGADMIN_DEFAULT_PASSWORD=admin1993 #if you add any changes to your code if you can not connect to postgres using pgadmin then try docker-compose down --volume
+    volumes:
+      - pgadmin_data:/root/.pgadmin
+    restart: always
+    ports:
+      - "5050:80"
+   
+          
     
   catalog.api:
     container_name: catalogapi
@@ -31,7 +55,7 @@ services:
     container_name: besketapi
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      #- "DatabaseSettings:ConnectionString=basketdb:6379"
+      - "DatabaseSettings:ConnectionString=basketdb:6379"
     depends_on:
       - basketdb
 
