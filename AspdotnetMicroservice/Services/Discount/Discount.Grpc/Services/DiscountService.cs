@@ -27,32 +27,33 @@ namespace Discount.Grpc.Services
                 throw new RpcException(new Status(StatusCode.NotFound, "Discount not found"));
             }
             return _mapper.Map<CouponModel>(discount);
-        
+               
+          
         }
 
         public override async Task<CouponModel> CreateDiscount(CreateDiscountRequest request, ServerCallContext context)
         {
-            var discount = _mapper.Map<Coupon>(request.Coupon);
-            var createdDiscount = await _discountRepository.CreateDiscount(discount);
-            logger.LogInformation($"Discount {discount.ProductName} created");
-            return _mapper.Map<CouponModel>(createdDiscount);
+            var coupon = _mapper.Map<Coupon>(request);
+            var discount = await _discountRepository.CreateDiscount(coupon);
+            return _mapper.Map<CouponModel>(coupon);
         }
+
 
         public override async Task<CouponModel> UpdateDiscount(UpdateDiscountRequest request, ServerCallContext context)
         {
-            var discount = _mapper.Map<Coupon>(request.Coupon);
-            var updatedDiscount = await _discountRepository.UpdateDiscount(discount);
-            logger.LogInformation($"Discount {discount.ProductName} updated");
-            return _mapper.Map<CouponModel>(updatedDiscount);
+            var coupon = _mapper.Map<Coupon>(request);
+            var discount = await _discountRepository.UpdateDiscount(coupon);
+            return _mapper.Map<CouponModel>(coupon);
         }
-        
+
         public override async Task<DeleteDiscountResponse> DeleteDiscount(DeleteDiscountRequest request, ServerCallContext context)
         {
-            var discount = await _discountRepository.DeleteDiscount(request.ProductName);
-            logger.LogInformation($"Discount {request.ProductName} deleted");
-            return new DeleteDiscountResponse { Success = discount.ToString() };
-
-
+            var coupon = _mapper.Map<Coupon>(request);
+            var discount = await _discountRepository.DeleteDiscount(coupon.ProductName);
+            return new DeleteDiscountResponse
+            {
+                Success = discount.ToString()
+            };
         }
     }
 }
