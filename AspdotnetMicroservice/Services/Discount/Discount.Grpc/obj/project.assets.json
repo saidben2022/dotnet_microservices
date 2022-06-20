@@ -282,7 +282,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Npgsql/6.0.4": {
+      "Npgsql/6.0.5": {
         "type": "package",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -846,10 +846,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Npgsql/6.0.4": {
-      "sha512": "SJMlOmFHr32oOzVXeHmarGaBKkhi0wHVN/rzuu2tUSJ4Qx2AkHCpr9R/DhLWwDiklqgzFU++9wkFyGJxbx/zzg==",
+    "Npgsql/6.0.5": {
+      "sha512": "a11H5/b5yNTuFN0Ycjvb920oI6vQHadt6KhEMmcC7DfvsSHH8Z3wBam+CHmyWcfDxJJaxamcdBb8XA3BvqS4Kw==",
       "type": "package",
-      "path": "npgsql/6.0.4",
+      "path": "npgsql/6.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -864,7 +864,7 @@
         "lib/netstandard2.0/Npgsql.xml",
         "lib/netstandard2.1/Npgsql.dll",
         "lib/netstandard2.1/Npgsql.xml",
-        "npgsql.6.0.4.nupkg.sha512",
+        "npgsql.6.0.5.nupkg.sha512",
         "npgsql.nuspec",
         "postgresql.png"
       ]
@@ -922,7 +922,7 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
       "Dapper >= 2.0.123",
       "Grpc.AspNetCore >= 2.46.0",
-      "Npgsql >= 6.0.4"
+      "Npgsql >= 6.0.5"
     ]
   },
   "packageFolders": {
@@ -988,7 +988,7 @@
           },
           "Npgsql": {
             "target": "Package",
-            "version": "[6.0.4, )"
+            "version": "[6.0.5, )"
           }
         },
         "imports": [

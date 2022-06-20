@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "doBHGdfHRq1mqMvZeXmYkY78ErnY781YITP1Nzs7KKV/V+/nWTvu99k0Ld7TGcHK6LPTN/cqCFwEScSd2aXI7g==",
+  "dgSpecHash": "OSWBQIN2YEfpGNRoPwpucHrUYFNkmjUA6Z2EBhdSh1HjlIRBEuLGho3dgiu+sttmsJc1WWa/Td0WXeO0cmyq/w==",
   "success": true,
   "projectFilePath": "D:\\dot net repos\\AspdotnetMicroservice\\Services\\Discount\\Discount.Grpc\\Discount.Grpc.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,7 @@
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\MSI\\.nuget\\packages\\npgsql\\6.0.4\\npgsql.6.0.4.nupkg.sha512",
+    "C:\\Users\\MSI\\.nuget\\packages\\npgsql\\6.0.5\\npgsql.6.0.5.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],

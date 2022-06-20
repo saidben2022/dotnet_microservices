@@ -3,7 +3,7 @@
     public class ShopingCartItem
     {
         public int Quantity { get; set; }
-        public int ProductId { get; set; }
+        public string ProductId { get; set; }//Important Id is String
         
         public string Color { get; set; }
 
