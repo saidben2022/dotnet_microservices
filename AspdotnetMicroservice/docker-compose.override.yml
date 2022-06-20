@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   catalogdb:
-    container_name: catalogdb
+    container_name: catalog.db
     restart: always
     ports:
       - "27017:27017"
@@ -10,12 +10,12 @@ services:
       - mongo_data:/data/db
     
   basketdb:
-    container_name: basketdb
+    container_name: basket.db
     restart: always
     ports:
       - "6379:6379"
   discountdb:
-    container_name: discountdb
+    container_name: discount.db
     environment:
       - POSTGRES_USER=postgres #Be carful to do not add any whitespace after =
       - POSTGRES_PASSWORD=postgres1993
@@ -41,7 +41,7 @@ services:
           
     
   catalog.api:
-    container_name: catalogapi
+    container_name: catalog.api
   
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -52,10 +52,12 @@ services:
       - "8000:80"
 
   basket.api:
-    container_name: besketapi
+    container_name: besket.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "DatabaseSettings:ConnectionString=basketdb:6379"
+      - "GrpcSettings:DiscountUrl=http://discount.grpc" #add http:// or you would get an exeption
+
     depends_on:
       - basketdb
 
@@ -64,7 +66,7 @@ services:
 
 
   discount.api:
-    container_name: discountapi
+    container_name: discount.api
 
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -74,3 +76,14 @@ services:
     ports:
       - "8002:80"
 
+
+  discount.grpc:
+    container_name: discount.grpc
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=Server=discountdb;Port=5432;Database=DiscountDb;User Id=postgres;Password=postgres1993;"
+
+    depends_on:
+      - discountdb
+    ports:
+      - "8003:80"
