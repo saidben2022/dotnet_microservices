@@ -9,4 +9,4 @@ if you can not connect to postgres using pgadmin then try docker-compose down --
 # Important!!!!!!
 when you create a table in postgres do not use the easy way (the interface) to do it,instead use the create query
 # Important!!!!!!
-For 
+For Ordering microservices please read Ordering file in the project
