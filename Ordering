@@ -1,0 +1,4 @@
+In the Ordering project there is some dependensy between the ClassLibrary and the project :
+* Ordering.Application Depends on Oredering.Domain
+* Ordering.Infrastracture Depends on Ordering.Application
+* Ordering.Api Depends on Ordering.Application and Ordering.Infrastracture
