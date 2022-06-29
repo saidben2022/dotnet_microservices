@@ -1,0 +1,17 @@
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\bin\Debug\net6.0\Ordering.Infrastracture.deps.json
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\bin\Debug\net6.0\Ordering.Infrastracture.dll
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\bin\Debug\net6.0\Ordering.Infrastracture.pdb
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\bin\Debug\net6.0\Ordering.Application.dll
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\bin\Debug\net6.0\Ordering.Domain.dll
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\bin\Debug\net6.0\Ordering.Application.pdb
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\bin\Debug\net6.0\Ordering.Domain.pdb
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\obj\Debug\net6.0\Ordering.Infrastracture.csproj.AssemblyReference.cache
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\obj\Debug\net6.0\Ordering.Infrastracture.GeneratedMSBuildEditorConfig.editorconfig
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\obj\Debug\net6.0\Ordering.Infrastracture.AssemblyInfoInputs.cache
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\obj\Debug\net6.0\Ordering.Infrastracture.AssemblyInfo.cs
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\obj\Debug\net6.0\Ordering.Infrastracture.csproj.CoreCompileInputs.cache
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\obj\Debug\net6.0\Ordering.Infrastracture.csproj.CopyComplete
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\obj\Debug\net6.0\Ordering.Infrastracture.dll
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\obj\Debug\net6.0\refint\Ordering.Infrastracture.dll
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\obj\Debug\net6.0\Ordering.Infrastracture.pdb
+D:\dot net repos\AspdotnetMicroservice\Services\Ordering\Ordering.Infrastracture\obj\Debug\net6.0\ref\Ordering.Infrastracture.dll
