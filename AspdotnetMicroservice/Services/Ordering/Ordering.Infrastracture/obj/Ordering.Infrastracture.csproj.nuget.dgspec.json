@@ -53,7 +53,15 @@
               "target": "Package",
               "version": "[11.0.1, )"
             },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "FluentValidation": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[11.1.0, )"
             },
