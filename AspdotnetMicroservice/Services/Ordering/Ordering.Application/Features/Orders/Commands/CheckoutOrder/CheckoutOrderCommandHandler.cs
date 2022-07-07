@@ -22,9 +22,9 @@ namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
         public CheckoutOrderCommandHandler(IOrderRepository orderRepository, IMapper mapper,IEmailService emailService)
         {
 
-            this._orderRepository = orderRepository;
-            this._mapper = mapper;
-            this._mailService = emailService;
+           _orderRepository = orderRepository;
+            _mapper = mapper;
+            _mailService = emailService;
 
         }
 
@@ -37,7 +37,7 @@ namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
          }
         private async Task SendMail(Order order)
         {
-            var email = new Email() { To = "ezozkme@gmail.com", Body = $"Order was created.", Subject = "Order was created" };
+            var email = new Email() { To = "saidben@gmail.com", Body = $"Order was created.", Subject = "Order was created" };
 
             try
             {
@@ -45,6 +45,7 @@ namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 //_logger.LogError($"Order {order.Id} failed due to an error with the mail service: {ex.Message}");
             }
         }

@@ -42,7 +42,6 @@ namespace Ordering.Api.Controllers
         {
             var result = _mediator.Send(UpdateOrdercommand);
             return NoContent();
-
         }
     }
 }

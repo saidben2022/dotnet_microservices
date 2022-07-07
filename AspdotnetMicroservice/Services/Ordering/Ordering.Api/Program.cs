@@ -1,3 +1,13 @@
+using MediatR;
+using Ordering.Api.Extensions;
+using Ordering.Application;
+using Ordering.Application.Contracts.Infrastructure;
+using Ordering.Application.Models;
+using Ordering.Infrastracture;
+using Ordering.Infrastracture.Mail;
+using Ordering.Infrastracture.Presistence;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +17,19 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Add service to container from Application and infrastracture layers using dependency injection
+
+
+builder.Services.AddApplicationServices();//warning if you can not migrate remove these these line and go to AddInfrastractureServices() and remove everthing exept the database configuration
+builder.Services.AddInfrastractureServices(builder.Configuration);
+
 var app = builder.Build();
+app.MigrateDatabase<OrderContext>((context, service) =>
+{
+    OrderContextSeed
+                         .SeedAsync(context)
+                         .Wait();
+});//migrate before runing the app
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
