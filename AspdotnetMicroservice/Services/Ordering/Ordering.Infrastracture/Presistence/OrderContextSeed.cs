@@ -14,13 +14,14 @@ namespace Ordering.Infrastracture.Presistence
             if (!orderContext.orders.Any())
             {
                 orderContext.orders.AddRange(GetPreconfiguredOrder());
+                orderContext.SaveChanges();//never forget these one
             }
         }
         private static IEnumerable<Order> GetPreconfiguredOrder()
         {
             return new List<Order>
             {
-                new Order() {UserName = "swn", FirstName   = "Mehmet", LastName = "Ozkaya", EmailAddress = "ezozkme@gmail.com", AddressLine = "Bahcelievler", Country = "Turkey", TotalPrice = 350 }
+                new Order() {UserName = "swn", FirstName   = "Mehmet", LastName = "Ozkaya", EmailAddress = "ezozkme@gmail.com", AddressLine = "Bahcelievler", Country = "Turkey", TotalPrice = 350,CVV="5550",PaymentMethod=1,CardName="Said ben",CardNumber="XXX XXX",Expiration="12/02/2022" ,ZipCode="60300",State="Oriental",CreatedBy="Said",CreatedDate=DateTime.Now,UpdatedBy="Said",UpdatedDate=DateTime.Now}
             };
         }
     }

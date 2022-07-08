@@ -24,12 +24,10 @@ builder.Services.AddApplicationServices();//warning if you can not migrate remov
 builder.Services.AddInfrastractureServices(builder.Configuration);
 
 var app = builder.Build();
-app.MigrateDatabase<OrderContext>((context, service) =>
-{
-    OrderContextSeed
-                         .SeedAsync(context)
-                         .Wait();
-});//migrate before runing the app
+
+
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -41,5 +39,15 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
+//migrate before runing the app*/
+
+app.MigrateDatabase<OrderContext>((context, service) =>
+{
+    OrderContextSeed
+                         .SeedAsync(context)
+                         .Wait();
+});
+
 
 app.Run();
