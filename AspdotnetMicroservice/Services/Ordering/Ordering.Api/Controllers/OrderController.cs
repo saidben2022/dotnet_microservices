@@ -16,14 +16,14 @@ namespace Ordering.Api.Controllers
         {
             this._mediator = mediator;
         }
-
+       //DO NOT FORGET THE AWAIT OR IT WOULD CAUSE PROBLEMS FOR DAYS
         [HttpGet("{username}",Name = "GetOrderByUsername")]
         [ProducesResponseType(typeof(IEnumerable<OrderVm>),StatusCodes.Status200OK)]
         public async Task<ActionResult<IEnumerable<OrderVm>>> GetOrderByUsername(string username)
         {
             var query=new GetOrderListQuery(username);
             var orders = _mediator.Send(query);
-            return Ok(orders);
+            return Ok(await orders);//AWAIT IS VERY IMPORTANT HERE 
 
         }
         [HttpPost(Name ="checkoutOrder")]
@@ -31,7 +31,7 @@ namespace Ordering.Api.Controllers
         public async Task<ActionResult<int>> CheckoutOrderCommand([FromBody] CheckoutOrderCommand ordercommand)
         {
             var result = _mediator.Send(ordercommand);
-            return Ok(result);
+            return Ok(await result);
 
         }
         [HttpPut(Name = "updateOrder")]
