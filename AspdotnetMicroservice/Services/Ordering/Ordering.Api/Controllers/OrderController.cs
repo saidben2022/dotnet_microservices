@@ -16,22 +16,26 @@ namespace Ordering.Api.Controllers
         {
             this._mediator = mediator;
         }
-       //DO NOT FORGET THE AWAIT OR IT WOULD CAUSE PROBLEMS FOR DAYS
+      
+       /// ///////////////////////////DO NOT FORGET THE AWAIT OR IT WOULD CAUSE PROBLEMS FOR DAYS///////////////////////////////////////////////////////////////
+    
+
+
         [HttpGet("{username}",Name = "GetOrderByUsername")]
         [ProducesResponseType(typeof(IEnumerable<OrderVm>),StatusCodes.Status200OK)]
         public async Task<ActionResult<IEnumerable<OrderVm>>> GetOrderByUsername(string username)
         {
             var query=new GetOrderListQuery(username);
-            var orders = _mediator.Send(query);
-            return Ok(await orders);//AWAIT IS VERY IMPORTANT HERE 
+            var orders = await _mediator.Send(query);//AWAIT IS VERY IMPORTANT HERE 
+            return Ok( orders);
 
         }
         [HttpPost(Name ="checkoutOrder")]
         [ProducesResponseType(typeof(IEnumerable<OrderVm>), StatusCodes.Status200OK)]
         public async Task<ActionResult<int>> CheckoutOrderCommand([FromBody] CheckoutOrderCommand ordercommand)
         {
-            var result = _mediator.Send(ordercommand);
-            return Ok(await result);
+            var result = await _mediator.Send(ordercommand);//AWAIT IS VERY IMPORTANT HERE 
+            return Ok( result);
 
         }
         [HttpPut(Name = "updateOrder")]
@@ -40,7 +44,7 @@ namespace Ordering.Api.Controllers
 
         public async Task<ActionResult<int>> UpdateOrder([FromBody] UpdateOrderCommand UpdateOrdercommand)
         {
-            var result = _mediator.Send(UpdateOrdercommand);
+            var result = await _mediator.Send(UpdateOrdercommand);//AWAIT IS VERY IMPORTANT HERE 
             return NoContent();
         }
     }
